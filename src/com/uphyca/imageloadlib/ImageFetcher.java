@@ -89,13 +89,15 @@ public abstract class ImageFetcher {
             bitmap = mImageCache.getBitmapFromMemCache(url);
         }
 
-        if (bitmap != null) {
+        if (bitmap != null && imageView != null) {
             imageView.setImageBitmap(bitmap);
 
         } else if (cancelPotentialWork(url, imageView)) {
             final BitmapWorkerTask task = new BitmapWorkerTask(imageView);
             final AsyncDrawable asyncDrawable = new AsyncDrawable(mContext.getResources(), loadingBitmap, task);
-            imageView.setImageDrawable(asyncDrawable);
+            if(imageView != null) {
+                imageView.setImageDrawable(asyncDrawable);
+            }
             executeTaskInParallel(url, task);
         }
     }
