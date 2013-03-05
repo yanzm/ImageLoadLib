@@ -4,23 +4,23 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.uphyca.android</groupId>
 	<artifactId>imageloadlib</artifactId>
-	<version>1.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>apklib</packaging>
 	<name>ImageLoadLib</name>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.google.android</groupId>
+				<groupId>android</groupId>
 				<artifactId>android</artifactId>
-				<version>4.1.1.4</version>
+				<version>4.1.2_r4</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
 		<dependency>
-			<groupId>com.google.android</groupId>
+			<groupId>android</groupId>
 			<artifactId>android</artifactId>
 			<scope>provided</scope>
 		</dependency>
@@ -49,7 +49,7 @@
 
 					<configuration>
 						<sdk>
-							<platform>16</platform>
+							<platform>17</platform>
 						</sdk>
 						<undeployBeforeDeploy>true</undeployBeforeDeploy>
 					</configuration>
